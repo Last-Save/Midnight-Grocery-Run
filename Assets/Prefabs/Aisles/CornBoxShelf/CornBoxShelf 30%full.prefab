@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4703828932598058868
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.16999984
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18.714
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292205360910406011, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8187684720155924148, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_Name
+      value: CornBoxShelf Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301129039021827942, guid: e22a0ec8c20341643bb4841119c17017,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.002
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 1700771360187124139, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 7171344623686236880, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 2858977940156383868, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 3394972177201712622, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 6423355356039523918, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 4318064156526139254, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 1078628086550535593, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 444111890935967086, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 1687558447877971916, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 3445437374158829808, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 2291758877102909679, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 6894340237059381834, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 8100658180121832111, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 8565524799758642053, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 8660442088070637307, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 4300138004339826904, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 2898549012796493097, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 8925607008337031203, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 7079667022888791265, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 2458001115698473474, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 6933589430429737580, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 4673299919118215651, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 5507464756577098756, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 7313474337880862736, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 534344330261846646, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 841298922690992836, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 4865343570983743479, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 3609115306902327316, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 3082953048626893671, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 5953067693801963576, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 5157676607306306714, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 2987917315371303108, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 8554145433040832931, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 2714996479556615859, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 8302922019710662774, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 1378195520289864087, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 4835066347627208167, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 4484831441473374067, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    - {fileID: 2530437622581456181, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e22a0ec8c20341643bb4841119c17017, type: 3}
