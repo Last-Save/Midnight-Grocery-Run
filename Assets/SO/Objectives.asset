@@ -43,6 +43,73 @@ MonoBehaviour:
       ObjectiveText:
         GlocText: Press Tab to open inventory
         NormalText: 
+  - ObjectiveKey: "\u041F\u043E\u0447\u0435\u043D\u0438\u0442\u044C \u0441\u0432\u0435\u0442"
+    ObjectiveTitle:
+      GlocText: Fix the lights
+      NormalText: 
+    SubObjectives:
+    - SubObjectiveKey: "\u041D\u0430\u0439\u0442\u0438 \u0441\u0447\u0435\u0442\u043E\u043A"
+      CompleteCount: 1
+      ObjectiveText:
+        GlocText: Find an electrical panel
+        NormalText: 
+    - SubObjectiveKey: "\u0412\u043E\u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C
+        \u043F\u043E\u0434\u0430\u0447\u0443 \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0430"
+      CompleteCount: 3
+      ObjectiveText:
+        GlocText: Find the fuses [count]/3
+        NormalText: 
+    - SubObjectiveKey: "\u0412\u043E\u043E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u044C
+        \u043F\u043E\u0434\u0430\u0447\u0443 \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0430"
+      CompleteCount: 1
+      ObjectiveText:
+        GlocText: Insert the fuses into the electrical panel
+        NormalText: 
+  - ObjectiveKey: "\u041A\u0430\u0441\u0441\u0430"
+    ObjectiveTitle:
+      GlocText: Check what's left at the checkout
+      NormalText: 
+    SubObjectives:
+    - SubObjectiveKey: "\u041A\u0430\u0441\u0441\u0430"
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Maybe there's some cash left in the cash register
+        NormalText: 
+  - ObjectiveKey: "2 \u043D\u0430\u0447\u0430\u043B\u043E"
+    ObjectiveTitle:
+      GlocText: Figure out what's going on here
+      NormalText: 
+    SubObjectives:
+    - SubObjectiveKey: "1 \u043C\u0438\u043D\u0443\u0442\u0430"
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Inspect the store
+        NormalText: 
+  - ObjectiveKey: "2 \u043F\u043E\u0438\u0441\u043A \u0432\u044B\u0445\u043E\u0434\u0430"
+    ObjectiveTitle:
+      GlocText: Time to get out
+      NormalText: 
+    SubObjectives:
+    - SubObjectiveKey: "\u041D\u0410\u0439\u0442\u0438 \u0434\u0432\u0435\u0440\u044C"
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Find a way out
+        NormalText: 
+    - SubObjectiveKey: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C 3 \u0437\u0430\u043C\u043A\u0430"
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Open locks [count]/3
+        NormalText: 
+    - SubObjectiveKey: "\u043D\u043E\u0432\u044B\u0439 \u0432\u044B\u0445\u043E\u0434"
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Find a new way out
+        NormalText: 
+    - SubObjectiveKey: "\u0420\u0430\u0437\u0433\u0430\u0434\u0430\u0442\u044C Numpad"
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Find a way to open the door
+        NormalText: 
   - ObjectiveKey: 
     ObjectiveTitle:
       GlocText: 
