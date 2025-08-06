@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55106f91a38b6d4a8120c7aec3aa82d, type: 3}
+  m_Name: Objectives
+  m_EditorClassIdentifier: 
+  Objectives:
+  - ObjectiveKey: "\u041E\u0431\u0443\u0447\u0435\u043D\u0438\u0435"
+    ObjectiveTitle:
+      GlocText: First steps
+      NormalText: 
+    SubObjectives:
+    - SubObjectiveKey: WASD
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Use WASD to move
+        NormalText: 
+    - SubObjectiveKey: Shift
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Hold Shift to run
+        NormalText: 
+    - SubObjectiveKey: find flashlight
+      CompleteCount: 1
+      ObjectiveText:
+        GlocText: It's dark in here, it would be nice to find a flashlight.
+        NormalText: 
+    - SubObjectiveKey: E
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Press E to pick up the flashlight
+        NormalText: 
+    - SubObjectiveKey: Tab
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: Press Tab to open inventory
+        NormalText: 
+  - ObjectiveKey: 
+    ObjectiveTitle:
+      GlocText: 
+      NormalText: 
+    SubObjectives: []
