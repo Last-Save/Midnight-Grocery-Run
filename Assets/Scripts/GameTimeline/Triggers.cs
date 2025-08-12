@@ -30,14 +30,11 @@ namespace GameTimeline
 
         public void Initialize()
         {
-            _lightsFixTimeline.TriggerFindElectricalPanel();
-            //TODO: RIGHT
-            // _tutorialTimeline.TriggerNewGameStarted();
+            _tutorialTimeline.TriggerNewGameStarted();
         }
 
         public void CompleteTutorial()
         {
-            //TODO: RIGHT
             _lightsFixTimeline.TriggerFindElectricalPanel();
         }
 
