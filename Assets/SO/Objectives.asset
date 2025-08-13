@@ -110,8 +110,3 @@ MonoBehaviour:
       ObjectiveText:
         GlocText: Find a way to open the door
         NormalText: Find a way to open the door
-  - ObjectiveKey: 
-    ObjectiveTitle:
-      GlocText: 
-      NormalText: 
-    SubObjectives: []

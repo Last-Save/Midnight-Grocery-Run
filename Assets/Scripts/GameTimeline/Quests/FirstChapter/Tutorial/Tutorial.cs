@@ -14,7 +14,7 @@ namespace GameTimeline.Quests.FirstChapter.Tutorial
         private readonly TutorialTimelineController _tutorialTimeline;
         private TutorialPlayerInputController _inputController;
         private NotificationExplainerOpener _notificationExplainerOpener;
-        private Triggers _triggers;
+        private FirstChapterTriggers _firstChapterTriggers;
         
         [Title("Tutorial Triggers")]
         private readonly ObjectiveTrigger _basicControlsGiver;
@@ -30,7 +30,7 @@ namespace GameTimeline.Quests.FirstChapter.Tutorial
         [Inject]
         public Tutorial(
             TutorialTimelineController tutorialTimelineController,
-            Triggers triggers,
+            FirstChapterTriggers firstChapterTriggers,
             TutorialPlayerInputController inputController,
             NotificationExplainerOpener notificationExplainerOpener,
             [Inject(Id = "_basicControlsGiver")] ObjectiveTrigger basicControlsGiver,
@@ -45,7 +45,7 @@ namespace GameTimeline.Quests.FirstChapter.Tutorial
         )
         {
             _tutorialTimeline = tutorialTimelineController;
-            _triggers = triggers;
+            _firstChapterTriggers = firstChapterTriggers;
             _inputController = inputController;
             _notificationExplainerOpener = notificationExplainerOpener;
             
@@ -119,7 +119,7 @@ namespace GameTimeline.Quests.FirstChapter.Tutorial
         {
             _inputController.enabled = false;
             _notificationExplainerOpener.Dispose();
-            _triggers.CompleteTutorial();
+            _firstChapterTriggers.CompleteTutorial();
         }
     }
 }

@@ -26,6 +26,7 @@ namespace Installers
         [Title("Toggles Triggers")]
         [SerializeField] private GameObject _flashlightFound;
         [SerializeField] private GameObject _electricalPanelFoundTrigger;
+        [SerializeField] private GameObject _registerTrigger;
         
         [Title("Tutorial Triggers")]
         [SerializeField] private ObjectiveTrigger _basicControlsGiver;
@@ -36,21 +37,27 @@ namespace Installers
         [SerializeField] private ObjectiveTrigger _tabCompleter;
         
         [Title("UHFPS events")]
-        [SerializeField] private OnFlashlightPickup _onFlashlightPickup;
+        // [SerializeField] private OnFlashlightPickup _onFlashlightPickup;
         
         [Title("Fix lights Triggers")]
         [SerializeField] private ObjectiveTrigger _findElectricalPanel;
         [SerializeField] private ObjectiveTrigger _oneFuseFound;
         [SerializeField] private ObjectiveTrigger _installFusesQuest;
-
-
+        [SerializeField] private ObjectiveTrigger _fusesInstalledQuest;
+        [SerializeField] private FuseboxPuzzle _fuseboxPuzzle;
         
         
+        [Title("Register Quests")]
+        [SerializeField] private ObjectiveTrigger _registerQuestStart;
+
+
         public override void InstallBindings()
         {
             Container.BindInterfacesAndSelfTo<LightsFix>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<SecondChapterTriggers>().AsSingle().NonLazy();
             BindSceneQuests();
             BindLightsFix();
+            BindRegisterQuest();
             InstallUi();
             InstallQuestsLogic();
             InstallTogglesInteractables();
@@ -62,13 +69,14 @@ namespace Installers
 
         private void InstallUhfpsEvents()
         {
-            Container.Bind<OnFlashlightPickup>().FromInstance(_onFlashlightPickup).AsSingle();
+            // Container.Bind<OnFlashlightPickup>().FromInstance(_onFlashlightPickup).AsSingle();
         }
 
         private void InstallTogglesTriggers()
         {
             Container.Bind<GameObject>().WithId("_flashlightFound").FromInstance(_flashlightFound);
             Container.Bind<GameObject>().WithId("_electricalPanelFoundTrigger").FromInstance(_electricalPanelFoundTrigger);
+            Container.Bind<GameObject>().WithId("_registerTrigger").FromInstance(_registerTrigger);
         }
 
         private void InstallTogglesInteractables()
@@ -94,7 +102,7 @@ namespace Installers
             Container.BindInterfacesAndSelfTo<Tutorial>().AsSingle();
             Container.Bind<TutorialPlayerInputController>().FromInstance(_inputController).AsSingle();
             Container.Bind<TutorialPlayerTabInputController>().FromInstance(_tabInputController).AsSingle();
-            Container.BindInterfacesAndSelfTo<Triggers>().AsSingle();
+            Container.BindInterfacesAndSelfTo<FirstChapterTriggers>().AsSingle();
         }
 
         private void BindTutorial()
@@ -114,7 +122,13 @@ namespace Installers
             Container.Bind<ObjectiveTrigger>().WithId("_findElectricalPanel").FromInstance(_findElectricalPanel);
             Container.Bind<ObjectiveTrigger>().WithId("_oneFuseFound").FromInstance(_oneFuseFound);
             Container.Bind<ObjectiveTrigger>().WithId("_installFusesQuest").FromInstance(_installFusesQuest);
-            
+            Container.Bind<ObjectiveTrigger>().WithId("_fusesInstalledQuest").FromInstance(_fusesInstalledQuest);
+            Container.Bind<FuseboxPuzzle>().FromInstance(_fuseboxPuzzle);
+        }
+
+        private void BindRegisterQuest()
+        {
+            Container.Bind<ObjectiveTrigger>().WithId("_registerQuestStart").FromInstance(_registerQuestStart);
         }
         
         private void InstallElse()
