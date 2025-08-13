@@ -1,6 +1,7 @@
 ﻿using GameTimeline.Quests.FirstChapter.Tutorial.UI;
 using GameTimeline.Quests.Presenters;
 using GameTimeline.TImeLines;
+using ModestTree;
 using Sirenix.OdinInspector;
 using UHFPS.Runtime;
 using UnityEngine;
@@ -11,7 +12,8 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
     public class LightsFix : IInitializable
     {
         private readonly LightsFixTimelineController _timeline;
-        private readonly Triggers _triggers;
+        private readonly FirstChapterTriggers _firstChapterTriggers;
+        private readonly FuseboxPuzzle _puzzle;
         private readonly NotificationExplainerOpener _notificationExplainerOpener;
 
         [Title("Lights Fix Triggers")]
@@ -20,6 +22,7 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
         private readonly ObjectiveTrigger _findFusesTrigger;
         private readonly ObjectiveTrigger _insertFusesTrigger;
         private readonly ObjectiveTrigger _installFuses;
+        private readonly ObjectiveTrigger _fusesInstalledQuest;
 
         private readonly GameObject _electricalPanelFoundTrigger;
         private GameObject[] _fuses;
@@ -29,20 +32,24 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
         [Inject]
         public LightsFix(
             LightsFixTimelineController timeline,
-            Triggers triggers,
+            FirstChapterTriggers firstChapterTriggers,
+            FuseboxPuzzle puzzle,
             [Inject(Id = "_findElectricalPanel")] ObjectiveTrigger findElectricalPanelTrigger,
             [Inject(Id = "_oneFuseFound")] ObjectiveTrigger oneFuseFound,
             [Inject(Id = "_installFusesQuest")] ObjectiveTrigger installFuses,
+            [Inject(Id = "_fusesInstalledQuest")] ObjectiveTrigger fusesInstalledQuest,
             [Inject(Id = "_electricalPanelFoundTrigger")] GameObject electricalPanelFoundTrigger,
             [Inject(Id = "_fuses")] GameObject[] fuses
         )
         {
             _timeline = timeline;
-            _triggers = triggers;
+            _firstChapterTriggers = firstChapterTriggers;
+            _puzzle = puzzle;
 
             _findElectricalPanelTrigger = findElectricalPanelTrigger;
             _oneFuseFound = oneFuseFound;
             _electricalPanelFoundTrigger = electricalPanelFoundTrigger;
+            _fusesInstalledQuest = fusesInstalledQuest;
             _installFuses = installFuses;
             
             _fuses = fuses;
@@ -74,11 +81,14 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
         private void OnFusesFound()
         {
             _installFuses.TriggerObjective();
+            
+            _puzzle.OnAllFusesConnected.AddListener(_timeline.TriggerFusesInserted);
         }
 
         private void OnInsertFuses()
         {
-            _triggers.CompleteLightsFix();
+            _fusesInstalledQuest.TriggerObjective();
+            _firstChapterTriggers.CompleteLightsFix();
         }
         
         private void UpdateCollectedFuses()

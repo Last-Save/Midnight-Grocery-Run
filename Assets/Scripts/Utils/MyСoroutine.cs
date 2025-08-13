@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using GameTimeline;
 using UnityEngine;
 using Zenject;
@@ -25,8 +26,12 @@ namespace Utils
 
         public void ScheduleCompleteTutorial(float seconds)
         {
-            Debug.Log(_tutorialTimelineController);
             StartCoroutine(CompleteTutorialAfterDelay(seconds));
+        }
+
+        public void ScheduleMethodCall(float seconds, Action callback)
+        {
+            StartCoroutine(CallAfterDelay(seconds, callback));
         }
 
         private IEnumerator CompleteTutorialAfterDelay(float delay)
@@ -34,5 +39,12 @@ namespace Utils
             yield return new WaitForSeconds(delay);
             _tutorialTimelineController.TriggerTutorialCompleted();
         }
+        
+        private IEnumerator CallAfterDelay(float delay, Action callback)
+        {
+            yield return new WaitForSeconds(delay);
+            callback?.Invoke();
+        }
+        
     }
 }

@@ -48,6 +48,8 @@ namespace GameTimeline.TImeLines
 
         public void TriggerFusesInserted()
         {
+            Debug.Log("fuses inserted");
+            
             if (_fusesInsertedTriggered) return;
 
             _fusesInsertedTriggered = true;
