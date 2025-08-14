@@ -13,7 +13,7 @@ using Tutorial = GameTimeline.Quests.FirstChapter.Tutorial.Tutorial;
 
 namespace Installers
 {
-    public class QuestInstaller : MonoInstaller
+    public class FirstChapterInstaller : MonoInstaller
     {
         [SerializeField] private TutorialPlayerInputController _inputController;
         [SerializeField] private TutorialPlayerTabInputController _tabInputController;
