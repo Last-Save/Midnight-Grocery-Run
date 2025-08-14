@@ -26,19 +26,23 @@ namespace GameTimeline.Quests.SecondChapter.StoreInspection
         public void StartQuest()
         {
             _playerHealth.OnApplyDamage(85);
-            MyСoroutine.Instance.ScheduleMethodCall(8f, AssignInspectionQuest);
+            // MyСoroutine.Instance.ScheduleMethodCall(8f, AssignInspectionQuest);
+            MyСoroutine.Instance.ScheduleMethodCall(1f, AssignInspectionQuest);
         }
 
         private void AssignInspectionQuest()
         {
             _playerHealth.OnApplyHeal(85);
             _give.TriggerObjective();
-            MyСoroutine.Instance.ScheduleMethodCall(60f, CompleteInspectionQuest);
+            // MyСoroutine.Instance.ScheduleMethodCall(60f, CompleteInspectionQuest);
+            MyСoroutine.Instance.ScheduleMethodCall(1f, CompleteInspectionQuest);
         }
 
         private void CompleteInspectionQuest()
         {
             _complete.TriggerObjective();
+            
+            
         }
     }
 }
