@@ -397,10 +397,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5250359461771666332, guid: 7d9d3c8204456664f8371ae9696e0120, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7313561
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250359461771666332, guid: 7d9d3c8204456664f8371ae9696e0120, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7313563
+      objectReference: {fileID: 0}
+    - target: {fileID: 5250359461771666332, guid: 7d9d3c8204456664f8371ae9696e0120, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7313561
+      objectReference: {fileID: 0}
     - target: {fileID: 5469197370619516855, guid: 7d9d3c8204456664f8371ae9696e0120, type: 3}
       propertyPath: m_Name
       value: Chain1
       objectReference: {fileID: 0}
+    - target: {fileID: 6383336527209765107, guid: 7d9d3c8204456664f8371ae9696e0120, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 14b6e68fa3831f74f955f1cb6bfcb613, type: 2}
     - target: {fileID: 6869811717528333608, guid: 7d9d3c8204456664f8371ae9696e0120, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21.666155
@@ -441,6 +457,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9183646173327387705, guid: 7d9d3c8204456664f8371ae9696e0120, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300006, guid: 80cdd574cba999245927f66c110fb749, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
