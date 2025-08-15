@@ -152,7 +152,19 @@ namespace UHFPS.Runtime
             {
                 isHolding = true;
 
-x
+                if (interactableObject)
+                {
+                    if (!isPressed)
+                    {
+                        foreach (var interactStartPlayer in interactableObject.GetComponents<IInteractStartPlayer>())
+                        {
+                            interactStartPlayer.InteractStartPlayer(transform.root.gameObject);
+                        }
+
+                        foreach (var interactStart in interactableObject.GetComponents<IInteractStart>())
+                        {
+                            interactStart.InteractStart();
+                        }
 
                         if(interactableObject.TryGetComponent(out IInteractTimed timedInteract))
                         {
