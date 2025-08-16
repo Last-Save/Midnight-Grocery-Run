@@ -11,38 +11,38 @@ PrefabInstance:
     - target: {fileID: 168408848524245859, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 50c6f227caf0b054c9ee1b7265fbddbe, type: 2}
+      objectReference: {fileID: 2100000, guid: 68387a942e6527e47a7eff72019e4ae8, type: 2}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.250313
+      value: -0.239
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4165
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.9181
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.0000019967556
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000019967556
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1981055935838656868, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3942978116332352015, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: m_Name
@@ -58,7 +58,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4766501599251685943, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: PaperText.GlocText
-      value: papers.bloody
+      value: "*Noon, and I rang up the 1st receipt in this place \u2014 coffee for
+        $1 and a donut for 50\xA2. Only 3 people came in before closing, but it still
+        felt like the place finally woke up. Funny how small change and quiet can
+        feel like the start of something big."
       objectReference: {fileID: 0}
     - target: {fileID: 4766501599251685943, guid: 627ae67cafd26d148a3f288603948900, type: 3}
       propertyPath: ExamineSound.audioClip

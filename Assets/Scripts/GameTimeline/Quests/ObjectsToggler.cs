@@ -45,5 +45,11 @@ namespace GameTimeline.Quests
             if (targetObject != null)
                 targetObject.layer = layer;
         }
+
+        public static void ToggleDoorGameObject(GameObject doorToEnable, GameObject doorToDisable)
+        {
+            EnableObject(doorToEnable);
+            DisableObject(doorToDisable);
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using GameTimeline.Quests.SecondChapter.StoreInspection;
+﻿using GameTimeline.Quests.SecondChapter;
 using UnityEngine;
 
 namespace GameTimeline
@@ -7,17 +7,24 @@ namespace GameTimeline
     {
         private ShopSwitcher _shopSwitcher;
         private StoreInspection _storeInspection;
+        private GetOut _getOut;
 
-        public SecondChapterTriggers(ShopSwitcher shopSwitcher, StoreInspection storeInspection)
+        public SecondChapterTriggers(ShopSwitcher shopSwitcher, StoreInspection storeInspection, GetOut getOut)
         {
             _shopSwitcher = shopSwitcher;
             _storeInspection = storeInspection;
+            _getOut = getOut;
         }
         
         public void StartSecondChapterFirstQuest()
         {
             _shopSwitcher.SwitchGameToHorrorShop();
-            _storeInspection.StartQuest();
+            _storeInspection.StartQuest(StartSecondChapterSecondQuest);
+        }
+
+        public void StartSecondChapterSecondQuest()
+        {
+            _getOut.StartFromBeginning();
         }
     }
 }
