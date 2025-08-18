@@ -46,16 +46,16 @@ namespace GameTimeline
             _onFinishFirstChapter.OnPlayerEnter += FinishFirstChapter;
         }
 
-        public void Initialize()
-        {
-            //Начинать сначала
-            _tutorialTimeline.TriggerNewGameStarted();
-        }
-
         // public void Initialize()
         // {
-        //     FinishFirstChapter();
+        //     //Начинать сначала
+        //     _tutorialTimeline.TriggerNewGameStarted();
         // }
+
+        public void Initialize()
+        {
+            FinishFirstChapter();
+        }
 
         public void CompleteTutorial()
         {

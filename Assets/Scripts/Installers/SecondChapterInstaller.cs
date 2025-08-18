@@ -30,6 +30,7 @@ namespace Installers
         [SerializeField] private TimedInteractEvent _padlock02;
         [SerializeField] private TimedInteractEvent _padlock03;
         [SerializeField] private KeypadPuzzle _keypadPuzzle;
+        [SerializeField] private LeversPuzzle _leversPuzzle;
 
         [Title("Animators")]
         [SerializeField] private Animator _chain01Anim;
@@ -90,6 +91,7 @@ namespace Installers
             Container.Bind<TimedInteractEvent>().WithId("_padlock02").FromInstance(_padlock02);
             Container.Bind<TimedInteractEvent>().WithId("_padlock03").FromInstance(_padlock03);
             Container.Bind<KeypadPuzzle>().FromInstance(_keypadPuzzle);
+            Container.Bind<LeversPuzzle>().FromInstance(_leversPuzzle);
         }
         
         private void InstallAnimations()
