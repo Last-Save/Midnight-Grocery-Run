@@ -19,6 +19,8 @@ namespace GameTimeline.JumpScares
         {
             _babyCrying.TriggerJumpscare();
 
+            Debug.Log("*Ребенок плачет*");
+
             //TODO: Вставить реплику ГГ 
         }
         
