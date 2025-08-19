@@ -14,7 +14,13 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4d694a4679aa598458d4c5e238e78479, type: 2}
     - target: {fileID: 1314435344356368889, guid: 175cda2361ae7a5449b785a1195554bd, type: 3}
       propertyPath: m_Name
-      value: Paper_12 Variant
+      value: Lever_Curtain_UP
+      objectReference: {fileID: 0}
+    - target: {fileID: 1961380964991672981, guid: 175cda2361ae7a5449b785a1195554bd, type: 3}
+      propertyPath: PaperText.GlocText
+      value: "*Today the sun was shining right into my eyes through that old curtain.
+        Had to pull it higher until the light finally stopped bothering me. Funny\u2026
+        in the dark I always lower it, but this time I wanted to let more light in."
       objectReference: {fileID: 0}
     - target: {fileID: 3757987210568130592, guid: 175cda2361ae7a5449b785a1195554bd, type: 3}
       propertyPath: m_LocalPosition.x

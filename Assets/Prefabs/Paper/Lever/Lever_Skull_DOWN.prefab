@@ -12,17 +12,23 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1d6025ff1760d7e45a86d62a67e81926, type: 2}
+    - target: {fileID: 4896040298920346621, guid: a3030513aaa55844996f1bc7bfd206d9, type: 3}
+      propertyPath: PaperText.GlocText
+      value: "*The skull on the shelf still stares straight ahead. Yesterday I moved
+        it a bit lower so I wouldn\u2019t meet its gaze every time I passed. But
+        I swear\u2026 sometimes it looks upward on its own."
+      objectReference: {fileID: 0}
     - target: {fileID: 6756511771456470431, guid: a3030513aaa55844996f1bc7bfd206d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.202
+      value: 0.308
       objectReference: {fileID: 0}
     - target: {fileID: 6756511771456470431, guid: a3030513aaa55844996f1bc7bfd206d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.428
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6756511771456470431, guid: a3030513aaa55844996f1bc7bfd206d9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.462
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6756511771456470431, guid: a3030513aaa55844996f1bc7bfd206d9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,7 +60,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8750567498843606037, guid: a3030513aaa55844996f1bc7bfd206d9, type: 3}
       propertyPath: m_Name
-      value: Paper_11 Variant
+      value: Lever_Skull_DOWN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

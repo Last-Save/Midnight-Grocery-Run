@@ -1,6 +1,7 @@
 ﻿using System;
 using UHFPS.Runtime;
 using UnityEngine;
+using Utils;
 using Zenject;
 
 namespace GameTimeline.Quests.SecondChapter
@@ -29,6 +30,7 @@ namespace GameTimeline.Quests.SecondChapter
         private TimedInteractEvent _padlock02;
         private TimedInteractEvent _padlock03;
         private KeypadPuzzle _keypadPuzzle;
+        private LeversPuzzle _leversPuzzle;
         
         //Interactables animations
         private Animator _chain01Anim;
@@ -37,22 +39,26 @@ namespace GameTimeline.Quests.SecondChapter
         
         // Interactables GO
         private GameObject _keypad;
-        
         private GameObject _mainHorrorDoorClosed;
         private GameObject _mainHorrorDoorOpened;
         private GameObject _stockroomHorrorDoorClosed;
         private GameObject _stockroomHorrorDoorOpened;
         private GameObject _finalHorrorDoorClosed;
         private GameObject _finalHorrorDoorOpened;
+        private GameObject[] _levers;
         
         // Doors dynamic objects
         private DynamicObject _mainHorrorDoorOpenedDynamicObject;
         private DynamicObject _stockroomHorrorDoorOpenDynamicObject;
         private DynamicObject _finalHorrorDoorOpenedDynamicObject;
+        
+        // Trigger Emitters
+        private OnTriggerEnterEmitter _onLeverPuzzleQuestGiveTriggerEnter;
 
         public GetOut(
             PadlockQuest padlockQuest,
             NumpadQuest numpadQuest,
+            LeversPuzzle leversPuzzle,
             [Inject(Id = "_findDoor")] ObjectiveTrigger findDoor,
             [Inject(Id = "_doorFoundTrigger")] ObjectiveTrigger doorFoundTrigger,
             [Inject(Id = "_threeLocksComplete")] ObjectiveTrigger threeLocksComplete,
@@ -81,11 +87,14 @@ namespace GameTimeline.Quests.SecondChapter
             [Inject(Id = "_chain03Anim")] Animator chain03Anim,
             [Inject(Id = "_mainHorrorDoorOpenedDynamicObject")] DynamicObject mainHorrorDoorOpenedDynamicObject,
             [Inject(Id = "_stockroomHorrorDoorOpenDynamicObject")] DynamicObject stockroomHorrorDoorOpenDynamicObject,
-            [Inject(Id = "_finalHorrorDoorOpenedDynamicObject")] DynamicObject finalHorrorDoorOpenedDynamicObject
+            [Inject(Id = "_finalHorrorDoorOpenedDynamicObject")] DynamicObject finalHorrorDoorOpenedDynamicObject,
+            [Inject(Id = "_onLeverPuzzleQuestGiveTriggerEnter")] OnTriggerEnterEmitter onLeverPuzzleQuestGiveTriggerEnter,
+            [Inject(Id = "_levers")] GameObject[] levers
         )
         {
             _padlockQuest = padlockQuest;
             _numpadQuest = numpadQuest;
+            _leversPuzzle = leversPuzzle;
                 
             _findDoor = findDoor;
             _doorFoundTrigger = doorFoundTrigger;
@@ -116,6 +125,8 @@ namespace GameTimeline.Quests.SecondChapter
             _mainHorrorDoorOpenedDynamicObject = mainHorrorDoorOpenedDynamicObject;
             _stockroomHorrorDoorOpenDynamicObject = stockroomHorrorDoorOpenDynamicObject;
             _finalHorrorDoorOpenedDynamicObject = finalHorrorDoorOpenedDynamicObject;
+            _onLeverPuzzleQuestGiveTriggerEnter = onLeverPuzzleQuestGiveTriggerEnter;
+            _levers = levers;
         }
 
         void IInitializable.Initialize()
@@ -123,6 +134,7 @@ namespace GameTimeline.Quests.SecondChapter
             _mainHorrorDoorOpenedDynamicObject.useEvent1.AddListener(OnMainDoorOpened);
             // _stockroomHorrorDoorOpenDynamicObject.useEvent1.AddListener(OnStockroomDoorOpened);
             _finalHorrorDoorOpenedDynamicObject.useEvent1.AddListener(OnFleeComplete);
+            _onLeverPuzzleQuestGiveTriggerEnter.OnPlayerEnter += OnSolveLeversStart;
         }
 
         public void StartFromBeginning()
@@ -164,9 +176,24 @@ namespace GameTimeline.Quests.SecondChapter
             ObjectsToggler.EnableObject(_exploreCorridorTrigger.gameObject);
         }
 
+        private void OnSolveLeversStart()
+        {
+            _onLeverPuzzleQuestGiveTriggerEnter.OnPlayerEnter -= OnSolveLeversStart;
+
+            foreach (var lever in _levers)
+            {
+                ObjectsToggler.SetLayerToInteract(lever);
+            }
+            
+            _leversPuzzle.OnLeversCorrect.AddListener(OnSolveLeversComplete);
+        }
+
         private void OnSolveLeversComplete()
         {
             ObjectsToggler.ToggleDoorGameObject(_finalHorrorDoorOpened, _finalHorrorDoorClosed);
+            _leversPuzzle.OnLeversCorrect.RemoveListener(OnSolveLeversComplete);
+
+            //TODO: PlaySound door opened
             
             _fleeStart.TriggerObjective();
             _solveLeversComplete.TriggerObjective();

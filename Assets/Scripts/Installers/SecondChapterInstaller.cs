@@ -2,6 +2,7 @@
 using Sirenix.OdinInspector;
 using UHFPS.Runtime;
 using UnityEngine;
+using Utils;
 using Zenject;
 
 namespace Installers
@@ -46,11 +47,16 @@ namespace Installers
         [SerializeField] private GameObject _finalHorrorDoorClosed;
         [SerializeField] private GameObject _finalHorrorDoorOpened;
         [SerializeField] private GameObject _keypad;
+        [SerializeField] private GameObject[] _levers;
+        
         
         [Title("Doors dynamic objects")]
         [SerializeField] private DynamicObject _mainHorrorDoorOpenedDynamicObject;
         [SerializeField] private DynamicObject _stockroomHorrorDoorOpenDynamicObject;
         [SerializeField] private DynamicObject _finalHorrorDoorOpenedDynamicObject;
+        
+        [Title("Trigger Emitters")]
+        [SerializeField] private OnTriggerEnterEmitter _onLeverPuzzleQuestGiveTriggerEnter;
         
         public override void InstallBindings()
         {
@@ -66,8 +72,8 @@ namespace Installers
             InstallAnimations();
             InstallInteractablesGo();
             InstallDoorsDO();
+            InstallTriggerEmitters();
         }
-        
 
         private void InstallGoQuest()
         {
@@ -109,8 +115,8 @@ namespace Installers
             Container.Bind<GameObject>().WithId("_stockroomHorrorDoorOpened").FromInstance(_stockroomHorrorDoorOpened);
             Container.Bind<GameObject>().WithId("_finalHorrorDoorClosed").FromInstance(_finalHorrorDoorClosed);
             Container.Bind<GameObject>().WithId("_finalHorrorDoorOpened").FromInstance(_finalHorrorDoorOpened);
-            
             Container.Bind<GameObject>().WithId("_keypad").FromInstance(_keypad);
+            Container.Bind<GameObject[]>().WithId("_levers").FromInstance(_levers);
 
         }
 
@@ -120,5 +126,11 @@ namespace Installers
             Container.Bind<DynamicObject>().WithId("_stockroomHorrorDoorOpenDynamicObject").FromInstance(_stockroomHorrorDoorOpenDynamicObject);
             Container.Bind<DynamicObject>().WithId("_finalHorrorDoorOpenedDynamicObject").FromInstance(_finalHorrorDoorOpenedDynamicObject);
         }
+        
+        private void InstallTriggerEmitters()
+        {
+            Container.Bind<OnTriggerEnterEmitter>().WithId("_onLeverPuzzleQuestGiveTriggerEnter").FromInstance(_onLeverPuzzleQuestGiveTriggerEnter);
+        }
+
     }
 }

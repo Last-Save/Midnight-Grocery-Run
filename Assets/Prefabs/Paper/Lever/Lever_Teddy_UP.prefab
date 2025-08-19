@@ -14,7 +14,13 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 177ab702710eea04fba4961c4fa822ca, type: 2}
     - target: {fileID: 3365336008825020727, guid: bda8a857e90123a47b7dd19e6d974972, type: 3}
       propertyPath: m_Name
-      value: Paper_9 Variant
+      value: Lever_Teddy_UP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107527664031152778, guid: bda8a857e90123a47b7dd19e6d974972, type: 3}
+      propertyPath: PaperText.GlocText
+      value: "*Teddy is still sitting on the top shelf, looking down at something.
+        Yesterday I decided to place him lower so he wouldn\u2019t fall when the
+        door slams again. Strange, but it feels like his gaze always follows you."
       objectReference: {fileID: 0}
     - target: {fileID: 6235644447293035491, guid: bda8a857e90123a47b7dd19e6d974972, type: 3}
       propertyPath: m_LocalPosition.x

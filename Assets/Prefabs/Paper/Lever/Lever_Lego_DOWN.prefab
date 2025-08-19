@@ -8,17 +8,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 396152096448785424, guid: 5264056cc473c174a8b9137c25be3c89, type: 3}
+      propertyPath: PaperText.GlocText
+      value: "*Found an old box of building blocks. Built a tower\u2014probably taller
+        than my head. Funny how the higher you stacked the pieces, the steadier it
+        seemed. Until it fell on its own, of course."
+      objectReference: {fileID: 0}
     - target: {fileID: 3189250610265358109, guid: 5264056cc473c174a8b9137c25be3c89, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.8395
+      value: 0.655
       objectReference: {fileID: 0}
     - target: {fileID: 3189250610265358109, guid: 5264056cc473c174a8b9137c25be3c89, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.519
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3189250610265358109, guid: 5264056cc473c174a8b9137c25be3c89, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.481
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3189250610265358109, guid: 5264056cc473c174a8b9137c25be3c89, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,7 +60,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 19c40f47fdd6aef42ae1bf3e0adf1e81, type: 2}
     - target: {fileID: 6043163454513308845, guid: 5264056cc473c174a8b9137c25be3c89, type: 3}
       propertyPath: m_Name
-      value: Paper_10 Variant
+      value: Lever_Lego_DOWN
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

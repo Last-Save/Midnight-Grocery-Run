@@ -16,6 +16,12 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5a0aec701b26930468888a218b202311, type: 2}
+    - target: {fileID: 2814645245135931545, guid: ff3f32357bcaf8e4ca36ef0be8186507, type: 3}
+      propertyPath: PaperText.GlocText
+      value: "*We kept the freezer at -2\xB0F since opening. Yesterday, I found it
+        reading 14\xB0F \u2014 and it wasn\u2019t even plugged in. Inside, someone
+        had carved 8 shallow lines into the ice."
+      objectReference: {fileID: 0}
     - target: {fileID: 4124850782465734395, guid: ff3f32357bcaf8e4ca36ef0be8186507, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.723
@@ -62,9 +68,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2129596248008820593, guid: ff3f32357bcaf8e4ca36ef0be8186507, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3550264497784002499}
-    - targetCorrespondingSourceObject: {fileID: 2129596248008820593, guid: ff3f32357bcaf8e4ca36ef0be8186507, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 496953597929826712}
   m_SourcePrefab: {fileID: 100100000, guid: ff3f32357bcaf8e4ca36ef0be8186507, type: 3}
 --- !u!1 &8750567498843606037 stripped
@@ -72,27 +75,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2129596248008820593, guid: ff3f32357bcaf8e4ca36ef0be8186507, type: 3}
   m_PrefabInstance: {fileID: 7277142199181298532}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &3550264497784002499
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8750567498843606037}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.20397629, y: 0.29320884, z: 0.01954957}
-  m_Center: {x: -0.000000040978215, y: -0.00000003725291, z: 4.656703e-10}
 --- !u!114 &496953597929826712
 MonoBehaviour:
   m_ObjectHideFlags: 0
