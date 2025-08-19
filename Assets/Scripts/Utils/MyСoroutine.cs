@@ -45,6 +45,5 @@ namespace Utils
             yield return new WaitForSeconds(delay);
             callback?.Invoke();
         }
-        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using GameTimeline.JumpScares;
 using GameTimeline.Quests;
 using GameTimeline.TImeLines;
 using UHFPS.Runtime;
@@ -18,6 +19,9 @@ namespace GameTimeline
         private SecondChapterTriggers _secondChapterTriggers;
 
         private ObjectiveTrigger _registerQuestStart;
+
+        private FirstChapterJumpscare _jumpScaresFirstChapterJumpscare;
+
         
         private readonly OnTriggerEnterEmitter _onTriggerEnterEmitter;
         private readonly OnTriggerEnterEmitter _onFinishFirstChapter;
@@ -26,6 +30,7 @@ namespace GameTimeline
             TutorialTimelineController tutorialTimeline, 
             LightsFixTimelineController lightsFixTimeline,
             SecondChapterTriggers secondChapterTriggers,
+            FirstChapterJumpscare jumpScaresFirstChapterJumpscare,
             [Inject(Id = "_onElectricalPanelTriggerEntered")] OnTriggerEnterEmitter onTriggerEnterEmitter,
             [Inject(Id = "_registerTrigger")] GameObject registerTrigger,
             [Inject(Id = "_registerQuestStart")] ObjectiveTrigger registerQuestStart
@@ -41,6 +46,8 @@ namespace GameTimeline
             _onFinishFirstChapter = _registerTrigger.GetComponent<OnTriggerEnterEmitter>();
 
             _registerQuestStart = registerQuestStart;
+            
+            _jumpScaresFirstChapterJumpscare = jumpScaresFirstChapterJumpscare;
             
             _onTriggerEnterEmitter.OnPlayerEnter += CompleteSearchOfElectricalPanel;
             _onFinishFirstChapter.OnPlayerEnter += FinishFirstChapter;
@@ -59,7 +66,11 @@ namespace GameTimeline
 
         public void CompleteTutorial()
         {
+            
+            // TODO: баг с корутинами
             _lightsFixTimeline.TriggerFindElectricalPanel();
+            
+            MyСoroutine.Instance.ScheduleMethodCall(5f, _jumpScaresFirstChapterJumpscare.StartBabyCrying);
         }
 
         private void CompleteSearchOfElectricalPanel()
