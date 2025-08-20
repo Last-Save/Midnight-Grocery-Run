@@ -12,8 +12,12 @@ namespace Installers
     {
         [Title("First chapter")]
         [SerializeField] private JumpscareTrigger _babyCrying;
+        
+        [Title("First chapter GameObjects")]
+        [SerializeField] private GameObject _cartTrigger;
 
-        [Title("First chapter")]
+
+        [Title("Second chapter")]
 
 
         public override void InstallBindings()
@@ -27,6 +31,12 @@ namespace Installers
         private void InstallFirstChapter()
         {
             Container.Bind<JumpscareTrigger>().WithId("_babyCrying").FromInstance(_babyCrying);
+            
+            
+            //Install GameObjects
+            Container.Bind<GameObject>().WithId("_cartTrigger").FromInstance(_cartTrigger);
+
+            
         }
 
         private void InstallSecondChapter()

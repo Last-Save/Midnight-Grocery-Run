@@ -70,6 +70,7 @@ namespace GameTimeline
             // TODO: баг с корутинами
             _lightsFixTimeline.TriggerFindElectricalPanel();
             
+            // TODO: Переместить в GameTimeline.Quests.FirstChapter.Tutorial
             MyСoroutine.Instance.ScheduleMethodCall(5f, _jumpScaresFirstChapterJumpscare.StartBabyCrying);
         }
 

@@ -28,6 +28,9 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
         private GameObject[] _fuses;
 
         private int _fusesCollectedCount = 0;
+        
+        // JumpScares
+        private GameObject _cartTrigger;
 
         [Inject]
         public LightsFix(
@@ -39,7 +42,8 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
             [Inject(Id = "_installFusesQuest")] ObjectiveTrigger installFuses,
             [Inject(Id = "_fusesInstalledQuest")] ObjectiveTrigger fusesInstalledQuest,
             [Inject(Id = "_electricalPanelFoundTrigger")] GameObject electricalPanelFoundTrigger,
-            [Inject(Id = "_fuses")] GameObject[] fuses
+            [Inject(Id = "_fuses")] GameObject[] fuses,
+            [Inject(Id = "_cartTrigger")] GameObject cartTrigger
         )
         {
             _timeline = timeline;
@@ -53,6 +57,9 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
             _installFuses = installFuses;
             
             _fuses = fuses;
+            
+            // jumpScares
+            _cartTrigger = cartTrigger;
         }
 
         public void Initialize()
@@ -76,6 +83,8 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
                 ObjectsToggler.SetLayerToInteract(fuse);
                 fuse.GetComponent<InteractableItem>().OnTakeEvent.AddListener(UpdateCollectedFuses);
             }
+            
+            ObjectsToggler.EnableObject(_cartTrigger);
         }
 
         private void OnFusesFound()
