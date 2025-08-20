@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4483238394621948114}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8703603749070130466}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Controls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 5041850231899359331}
   - component: {fileID: 4196070090483019908}
   - component: {fileID: 8943734597063270090}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Tuner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,6 +125,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -160,8 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2721621007467320824}
   - component: {fileID: 2624214770641862259}
-  - component: {fileID: 3361396078242609301}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,28 +206,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.008193778, y: 0.00922744, z: 0.016188007}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3361396078242609301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321989056020280050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8000673b59460694c9086e1fa526eeae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Switch: {fileID: 6492247245733018234}
-  SwitchAxis: 4
-  SwitchLimits:
-    min: -0.025
-    max: -0.0172
-  SwitchSpeed: 0.05
-  SwitchDelta: 1
-  SwitchSound:
-    audioClip: {fileID: 8300000, guid: 32fe401cee65b2240b761988b9950145, type: 3}
-    volume: 0.5
 --- !u!1 &2527751840722393041
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +217,7 @@ GameObject:
   - component: {fileID: 6492247245733018234}
   - component: {fileID: 8935026002082542078}
   - component: {fileID: 3731856258444780567}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Power
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,6 +264,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -320,7 +303,7 @@ GameObject:
   - component: {fileID: 231049276356979011}
   - component: {fileID: 323467620912204103}
   - component: {fileID: 5012932070415826600}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Volume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -367,6 +350,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -403,9 +389,7 @@ GameObject:
   - component: {fileID: 6589010359051875347}
   - component: {fileID: 2831389008388144944}
   - component: {fileID: 2069115687548125480}
-  - component: {fileID: 3215675133824759780}
-  - component: {fileID: 2017041719101312343}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Tune
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,6 +436,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -477,46 +464,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3215675133824759780
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2945350335536939252}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 0.020000013, y: 0.010250399, z: 0.020000014}
-  m_Center: {x: 4.8479506e-25, y: -0.00063136546, z: -9.313226e-10}
---- !u!114 &2017041719101312343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2945350335536939252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91cbddd5b2f31b049b90783ae1063a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RotateAxis: 2
-  RotateLimits:
-    min: 1
-    max: 359
-  RotateAmount: 0.1
-  MaxRotateSpeed: 10
-  FlipMouse: 1
 --- !u!1 &4605262033271063778
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,10 +476,8 @@ GameObject:
   - component: {fileID: 5519433320315124281}
   - component: {fileID: 7480047425931984905}
   - component: {fileID: 3920773776875180476}
-  - component: {fileID: 263978045471592150}
-  - component: {fileID: 4743914404154588851}
   - component: {fileID: 7327323438354522885}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Radio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,6 +527,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -628,138 +576,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.20000008, y: 0.06783082, z: 0.13026008}
   m_Center: {x: 2.6246838e-11, y: -0.0042386795, z: 0.0040185056}
---- !u!114 &263978045471592150
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4605262033271063778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1193cc42578b51349ae91df02822e87c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <UniqueID>k__BackingField:
-    Id: 50922b0663aa44c1a253b6e42ee1606e
-  InteractableType: 2
-  MessageType: 0
-  ExamineType: 2
-  ExamineRotate: 3
-  DisableType: 0
-  PickupItem:
-    m_GUID: 
-    m_Item:
-      Name: 
-      GUID: 
-      Icon: {fileID: 0}
-    m_Section:
-      Name: 
-      GUID: 
-  ItemCustomData:
-    JsonData: 
-  InteractTitle:
-    GlocText: objects.radio
-    NormalText: 
-  ExamineTitle:
-    GlocText: objects.radio
-    NormalText: 
-  PaperText:
-    GlocText: 
-    NormalText: 
-  HintMessage:
-    GlocText: 
-    NormalText: 
-  MessageTime: 3
-  Quantity: 1
-  SlotsToExpand: 1
-  ExpandRows: 0
-  UseInventoryTitle: 0
-  ExamineInventoryTitle: 0
-  ShowExamineTitle: 1
-  ShowFloatingIcon: 0
-  TakeFromExamine: 0
-  AllowCursorExamine: 1
-  IsPaper: 0
-  AutoShortcut: 0
-  AutoEquip: 0
-  UseExamineZooming: 1
-  ExamineZoomLimits:
-    min: 0.35
-    max: 0.45
-  ExamineDistance: 0.45
-  UseFaceRotation: 0
-  FaceRotation: {x: 0, y: 0, z: 0}
-  UseControlPoint: 1
-  ControlPoint: {x: 0, y: 0.1, z: 0}
-  CollidersEnable:
-  - {fileID: 2624214770641862259}
-  - {fileID: 3215675133824759780}
-  CollidersDisable: []
-  ExamineHotspot:
-    HotspotTransform: {fileID: 0}
-    Enabled: 1
-    ResetHotspot: 0
-    HotspotAction:
-      m_PersistentCalls:
-        m_Calls: []
-  PickupSound:
-    audioClip: {fileID: 0}
-    volume: 0
-  ExamineSound:
-    audioClip: {fileID: 0}
-    volume: 0
-  ExamineHintSound:
-    audioClip: {fileID: 0}
-    volume: 0
-  OnTakeEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExamineStartEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnExamineEndEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  IsExamined: 0
---- !u!114 &4743914404154588851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4605262033271063778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2470b2c92d3030345b8c480606e90458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RadioChannels:
-  - ChannelType: 0
-    TunerPosition: -0.0316
-    ChannelAudio: {fileID: 8300000, guid: 9dbe9ceee7139914e9d88758e4092a05, type: 3}
-    Volume: 0.5
-  - ChannelType: 1
-    TunerPosition: -0.0606
-    ChannelAudio: {fileID: 8300000, guid: 2d957c0f3a49e22438ca1de2db3bf21e, type: 3}
-    Volume: 0.5
-  RadioTuner: {fileID: 2017041719101312343}
-  TunerRod: {fileID: 5041850231899359331}
-  TunerMoveAxis: 0
-  TunerLimits:
-    min: -0.0817
-    max: 0.0033
-  TuneRange: 0.001
-  EmissionKeyword: _EMISSION
-  AudioSource: {fileID: 7327323438354522885}
-  RadioStatic:
-    audioClip: {fileID: 8300000, guid: 29b34702662b50e43b6c8897ea143528, type: 3}
-    volume: 0.5
-  TuneSounds:
-  - {fileID: 8300000, guid: 4c9e44fce0158184d92c64cebd007b77, type: 3}
-  - {fileID: 8300000, guid: e7feec5e540254c47931ff951a7832bc, type: 3}
-  - {fileID: 8300000, guid: 9ad09e264f922c04b8ab34115b5ad70b, type: 3}
-  TuneVolume: 0.5
 --- !u!82 &7327323438354522885
 AudioSource:
   m_ObjectHideFlags: 0
@@ -770,9 +586,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2d957c0f3a49e22438ca1de2db3bf21e, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2d957c0f3a49e22438ca1de2db3bf21e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.225
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -781,9 +598,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 15
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -791,23 +608,50 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.06666667
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -15.005997
+      outSlope: -15.005997
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      time: 0.13333334
+      value: 0.5
+      inSlope: -3.7514992
+      outSlope: -3.7514992
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.26666668
+      value: 0.25
+      inSlope: -0.9378748
+      outSlope: -0.9378748
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6789327
+      value: 0
+      inSlope: -0.10159455
+      outSlope: -0.10159455
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.24938278
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.99823
+      value: 0
+      inSlope: -0.06669331
+      outSlope: -0.06669331
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -867,7 +711,7 @@ GameObject:
   - component: {fileID: 5217400538818240703}
   - component: {fileID: 2772413366399172356}
   - component: {fileID: 7324469000408993068}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Bass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,6 +758,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
