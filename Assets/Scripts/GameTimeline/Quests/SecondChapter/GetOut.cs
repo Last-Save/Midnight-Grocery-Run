@@ -52,8 +52,11 @@ namespace GameTimeline.Quests.SecondChapter
         private DynamicObject _stockroomHorrorDoorOpenDynamicObject;
         private DynamicObject _finalHorrorDoorOpenedDynamicObject;
         
-        // Trigger Emitters
-        private OnTriggerEnterEmitter _onLeverPuzzleQuestGiveTriggerEnter;
+        //JumpScares
+        private JumpscareTrigger _firstDirectJumpScareGeneric;
+        private JumpscareTrigger _secondDirectJumpScareGeneric;
+        private JumpscareTrigger _thirdDirectJumpScareGeneric;
+        private JumpscareTrigger _fourthDirectJumpScareGeneric;
 
         public GetOut(
             PadlockQuest padlockQuest,
@@ -89,7 +92,11 @@ namespace GameTimeline.Quests.SecondChapter
             [Inject(Id = "_stockroomHorrorDoorOpenDynamicObject")] DynamicObject stockroomHorrorDoorOpenDynamicObject,
             [Inject(Id = "_finalHorrorDoorOpenedDynamicObject")] DynamicObject finalHorrorDoorOpenedDynamicObject,
             [Inject(Id = "_onLeverPuzzleQuestGiveTriggerEnter")] OnTriggerEnterEmitter onLeverPuzzleQuestGiveTriggerEnter,
-            [Inject(Id = "_levers")] GameObject[] levers
+            [Inject(Id = "_levers")] GameObject[] levers,
+            [Inject(Id = "_firstDirectJumpScareGeneric")] JumpscareTrigger firstDirectJumpScareGeneric,
+            [Inject(Id = "_secondDirectJumpScareGeneric")] JumpscareTrigger secondDirectJumpScareGeneric,
+            [Inject(Id = "_thirdDirectJumpScareGeneric")] JumpscareTrigger thirdDirectJumpScareGeneric,
+            [Inject(Id = "_fourthDirectJumpScareGeneric")] JumpscareTrigger fourthDirectJumpScareGeneric
         )
         {
             _padlockQuest = padlockQuest;
@@ -127,7 +134,15 @@ namespace GameTimeline.Quests.SecondChapter
             _finalHorrorDoorOpenedDynamicObject = finalHorrorDoorOpenedDynamicObject;
             _onLeverPuzzleQuestGiveTriggerEnter = onLeverPuzzleQuestGiveTriggerEnter;
             _levers = levers;
+            _firstDirectJumpScareGeneric = firstDirectJumpScareGeneric;
+            _secondDirectJumpScareGeneric = secondDirectJumpScareGeneric;
+            _thirdDirectJumpScareGeneric = thirdDirectJumpScareGeneric;
+            _fourthDirectJumpScareGeneric = fourthDirectJumpScareGeneric;
         }
+
+        // Trigger Emitters
+
+        private OnTriggerEnterEmitter _onLeverPuzzleQuestGiveTriggerEnter;
 
         void IInitializable.Initialize()
         {
@@ -151,6 +166,8 @@ namespace GameTimeline.Quests.SecondChapter
         private void OnThreePadlocksOpened()
         {
             ObjectsToggler.ToggleDoorGameObject(_mainHorrorDoorOpened, _mainHorrorDoorClosed);
+            
+            _secondDirectJumpScareGeneric.TriggerJumpscare();
 
             _openFirstDoor.TriggerObjective();
             _threeLocksComplete.TriggerObjective();

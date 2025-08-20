@@ -17,8 +17,13 @@ namespace Installers
         [SerializeField] private GameObject _cartTrigger;
 
 
-        [Title("Second chapter")]
+        [Title("Second chapter facial")]
+        [SerializeField] private JumpscareTrigger _firstDirectJumpScareGeneric;
+        [SerializeField] private JumpscareTrigger _secondDirectJumpScareGeneric;
+        [SerializeField] private JumpscareTrigger _thirdDirectJumpScareGeneric;
+        [SerializeField] private JumpscareTrigger _fourthDirectJumpScareGeneric;
 
+        
 
         public override void InstallBindings()
         {
@@ -41,7 +46,11 @@ namespace Installers
 
         private void InstallSecondChapter()
         {
-            
+            Container.Bind<JumpscareTrigger>().WithId("_firstDirectJumpScareGeneric").FromInstance(_firstDirectJumpScareGeneric);
+            Container.Bind<JumpscareTrigger>().WithId("_secondDirectJumpScareGeneric").FromInstance(_secondDirectJumpScareGeneric);
+            Container.Bind<JumpscareTrigger>().WithId("_thirdDirectJumpScareGeneric").FromInstance(_thirdDirectJumpScareGeneric);
+            Container.Bind<JumpscareTrigger>().WithId("_fourthDirectJumpScareGeneric").FromInstance(_fourthDirectJumpScareGeneric);
+
         }
     }
 }

@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 3673190578854056902}
   - component: {fileID: 1782415805239157628}
   m_Layer: 6
-  m_Name: Padlock_01_interact
+  m_Name: Old_Padlock_01_interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   UseUseTitleDynamic: 0
   UseExamineTitleDynamic: 0
   Title:
-    GlocText: '*Padlock'
+    GlocText: '*Old Padlock'
     NormalText: 
   TrueTitle:
     GlocText: 
@@ -256,7 +256,7 @@ MonoBehaviour:
   ShowRequireItemHint: 1
   HintMessageTime: 2
   HintMessage:
-    GlocText: '*A key is required to open the padlock'
+    GlocText: '*An old key is required to open the padlock'
     NormalText: 
   InteractSound:
     audioClip: {fileID: 8300000, guid: 3498de1b92cefb74c861fa7c0de8df15, type: 3}
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 3249546312451728292}
   - component: {fileID: 5634495198921289677}
   m_Layer: 6
-  m_Name: Padlock_02_interact
+  m_Name: Corroded_Padlock_02_interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,7 +616,7 @@ MonoBehaviour:
   UseUseTitleDynamic: 0
   UseExamineTitleDynamic: 0
   Title:
-    GlocText: '*Padlock'
+    GlocText: '*Corroded Padlock'
     NormalText: 
   TrueTitle:
     GlocText: 
@@ -670,7 +670,7 @@ MonoBehaviour:
   ShowRequireItemHint: 1
   HintMessageTime: 2
   HintMessage:
-    GlocText: '*A key is required to open the padlock'
+    GlocText: '*A corroded key is required to open the padlock'
     NormalText: 
   InteractSound:
     audioClip: {fileID: 8300000, guid: 4b23305384270604aa89bd752fde980f, type: 3}
@@ -772,7 +772,7 @@ GameObject:
   - component: {fileID: 8873045360055108308}
   - component: {fileID: 4999318123400408144}
   m_Layer: 6
-  m_Name: Padlock_03_interact
+  m_Name: Broken_Padlock_03_interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
   UseUseTitleDynamic: 0
   UseExamineTitleDynamic: 0
   Title:
-    GlocText: '*Padlock'
+    GlocText: '*Broken Padlock'
     NormalText: 
   TrueTitle:
     GlocText: 
@@ -881,7 +881,7 @@ MonoBehaviour:
   ShowRequireItemHint: 1
   HintMessageTime: 2
   HintMessage:
-    GlocText: '*A key is required to open the padlock'
+    GlocText: '*A broken key is required to open the padlock'
     NormalText: 
   InteractSound:
     audioClip: {fileID: 8300000, guid: 3498de1b92cefb74c861fa7c0de8df15, type: 3}
@@ -2053,6 +2053,30 @@ PrefabInstance:
       propertyPath: OnAccessGranted.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 608274595432533092, guid: 0530cb3eb23143e42a2d789025e8c295, type: 3}
+      propertyPath: OnButtonPressed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 608274595432533092, guid: 0530cb3eb23143e42a2d789025e8c295, type: 3}
+      propertyPath: OnButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 608274595432533092, guid: 0530cb3eb23143e42a2d789025e8c295, type: 3}
+      propertyPath: OnButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 608274595432533092, guid: 0530cb3eb23143e42a2d789025e8c295, type: 3}
+      propertyPath: OnButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumpadKeyPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 608274595432533092, guid: 0530cb3eb23143e42a2d789025e8c295, type: 3}
+      propertyPath: OnButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameTimeline.JumpScares.NumpadJumpScare, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 608274595432533092, guid: 0530cb3eb23143e42a2d789025e8c295, type: 3}
+      propertyPath: OnButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 608274595432533093, guid: 0530cb3eb23143e42a2d789025e8c295, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -2189,6 +2213,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1219887155133347251}
     m_Modifications:
+    - target: {fileID: 6523511627732863560, guid: 603618b8cbba6f84a8e40ac2ec0b5929, type: 3}
+      propertyPath: PickupSound.audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c49449c3ca375c4f9aa329e760a191d, type: 3}
+    - target: {fileID: 6523511627732863560, guid: 603618b8cbba6f84a8e40ac2ec0b5929, type: 3}
+      propertyPath: PickupItem.m_Item.Name
+      value: Corroded Padlock Key
+      objectReference: {fileID: 0}
     - target: {fileID: 7717178640306777218, guid: 603618b8cbba6f84a8e40ac2ec0b5929, type: 3}
       propertyPath: m_LocalPosition.x
       value: -22.720425
@@ -2231,7 +2263,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8551684161167021022, guid: 603618b8cbba6f84a8e40ac2ec0b5929, type: 3}
       propertyPath: m_Name
-      value: Key_02
+      value: Key_02_CorrodedPadlockKey
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2497,84 +2529,20 @@ PrefabInstance:
       propertyPath: PickupSound.audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9a15dc554a725d94a9d3696f7af45c43, type: 3}
+    - target: {fileID: 8712222069423591463, guid: a3a7a1a3c4743bb45987089a519f3f28, type: 3}
+      propertyPath: PickupItem.m_Item.Name
+      value: Old Padlock Key
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8695563393730487750, guid: a3a7a1a3c4743bb45987089a519f3f28, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2094323347354454023}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3a7a1a3c4743bb45987089a519f3f28, type: 3}
 --- !u!4 &148274632712072813 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7092407687920727926, guid: a3a7a1a3c4743bb45987089a519f3f28, type: 3}
   m_PrefabInstance: {fileID: 6945550945380112667}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1787741159090601181 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8695563393730487750, guid: a3a7a1a3c4743bb45987089a519f3f28, type: 3}
-  m_PrefabInstance: {fileID: 6945550945380112667}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2094323347354454023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1787741159090601181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e2230d6857bf14995464535978be6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DynamicTitle:
-    ReflectType: 0
-    Instance: {fileID: 0}
-    ReflectName: 
-    ReflectDerived: 0
-  DynamicUseTitle:
-    ReflectType: 0
-    Instance: {fileID: 0}
-    ReflectName: 
-    ReflectDerived: 0
-  DynamicExamineTitle:
-    ReflectType: 0
-    Instance: {fileID: 0}
-    ReflectName: 
-    ReflectDerived: 0
-  OverrideTitle: 0
-  OverrideUseTitle: 0
-  OverrideExamineTitle: 0
-  UseTitleDynamic: 0
-  UseUseTitleDynamic: 0
-  UseExamineTitleDynamic: 0
-  Title:
-    GlocText: 
-    NormalText: 
-  TrueTitle:
-    GlocText: 
-    NormalText: 
-  FalseTitle:
-    GlocText: 
-    NormalText: 
-  UseTitle:
-    GlocText: 
-    NormalText: 
-  TrueUseTitle:
-    GlocText: 
-    NormalText: 
-  FalseUseTitle:
-    GlocText: 
-    NormalText: 
-  ExamineTitle:
-    GlocText: 
-    NormalText: 
-  TrueExamineTitle:
-    GlocText: 
-    NormalText: 
-  FalseExamineTitle:
-    GlocText: 
-    NormalText: 
 --- !u!1001 &7052938263336378538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2647,7 +2615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1647625549479561365, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
       propertyPath: m_Name
-      value: Key_03
+      value: Key_03_BrokenPadlockKey
       objectReference: {fileID: 0}
     - target: {fileID: 2493115079062098535, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2688,6 +2656,14 @@ PrefabInstance:
     - target: {fileID: 2493115079062098535, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -34.505
+      objectReference: {fileID: 0}
+    - target: {fileID: 3691917716329880351, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
+      propertyPath: PickupSound.audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c49449c3ca375c4f9aa329e760a191d, type: 3}
+    - target: {fileID: 3691917716329880351, guid: 0d2474556dbb9714683a45e63c6a1ae6, type: 3}
+      propertyPath: PickupItem.m_Item.Name
+      value: Broken Padlock Key
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

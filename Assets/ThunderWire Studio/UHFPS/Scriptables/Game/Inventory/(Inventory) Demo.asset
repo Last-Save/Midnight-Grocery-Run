@@ -927,9 +927,9 @@ MonoBehaviour:
     Items:
     - GUID: b70a06636e824c48a8631756ccb04b3c
       SectionGUID: 9ce7786df37c4160ae9a0542acd94613
-      Title: Key 01
-      Description: A generic, yet mysterious key with an unknown use. Keep it on
-        hand, as it may unlock doors, chests, or secrets yet to be discovered.
+      Title: Old Padlock Key
+      Description: An ancient key worn smooth by countless hands. It carries the
+        weight of forgotten stories and may still open what was meant to remain closed.
       Width: 1
       Height: 1
       Orientation: 0
@@ -944,7 +944,7 @@ MonoBehaviour:
         isExaminable: 0
         isCombinable: 0
         isDroppable: 0
-        isDiscardable: 1
+        isDiscardable: 0
         canBindShortcut: 0
         alwaysShowQuantity: 0
       UsableSettings:
@@ -967,9 +967,9 @@ MonoBehaviour:
             on hand, as it may unlock doors, chests, or secrets yet to be discovered.
     - GUID: 12bb84ecda3946579a8db52385d1f86b
       SectionGUID: 9ce7786df37c4160ae9a0542acd94613
-      Title: Key 02
-      Description: A generic, yet mysterious key with an unknown use. Keep it on
-        hand, as it may unlock doors, chests, or secrets yet to be discovered.
+      Title: Corroded Padlock Key
+      Description: The metal is pitted and eaten away, as if touched by something
+        unnatural. Its lock awaits, but forcing it may awaken what sleeps behind.
       Width: 1
       Height: 1
       Orientation: 0
@@ -984,7 +984,7 @@ MonoBehaviour:
         isExaminable: 0
         isCombinable: 0
         isDroppable: 0
-        isDiscardable: 1
+        isDiscardable: 0
         canBindShortcut: 0
         alwaysShowQuantity: 0
       UsableSettings:
@@ -1007,9 +1007,9 @@ MonoBehaviour:
             on hand, as it may unlock doors, chests, or secrets yet to be discovered.
     - GUID: eb63b2ffe5af4b8cb8396f2d6eae67e5
       SectionGUID: 9ce7786df37c4160ae9a0542acd94613
-      Title: Key 03
-      Description: A generic, yet mysterious key with an unknown use. Keep it on
-        hand, as it may unlock doors, chests, or secrets yet to be discovered.
+      Title: Broken Padlock Key
+      Description: Jagged and unstable, this key feels ready to snap at any turn.
+        Yet something insists it still holds purpose in the darkness ahead.
       Width: 1
       Height: 1
       Orientation: 0
@@ -1024,7 +1024,7 @@ MonoBehaviour:
         isExaminable: 0
         isCombinable: 0
         isDroppable: 0
-        isDiscardable: 1
+        isDiscardable: 0
         canBindShortcut: 0
         alwaysShowQuantity: 0
       UsableSettings:
@@ -1064,7 +1064,7 @@ MonoBehaviour:
         isExaminable: 0
         isCombinable: 0
         isDroppable: 0
-        isDiscardable: 1
+        isDiscardable: 0
         canBindShortcut: 0
         alwaysShowQuantity: 0
       UsableSettings:
@@ -1289,8 +1289,10 @@ MonoBehaviour:
           NormalText: VHS Cassette
         descriptionKey:
           GlocText: item.description.vhscassette
-          NormalText: A classic, durable format for video recording and archiving
-            memories or documenting important events.
+          NormalText: 'Name: {name}
+
+            A classic, durable format for video
+            recording and archiving memories or documenting important events.'
     - GUID: 21cc6375d5614192aac1fedce6147cfa
       SectionGUID: be7f17ba3cb145e6883bea6a70f0deb7
       Title: Red Keycard
