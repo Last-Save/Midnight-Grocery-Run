@@ -31,7 +31,6 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
         
         // JumpScares
         private GameObject _cartTrigger;
-        private GameObject _cartScreamer;
 
         [Inject]
         public LightsFix(
@@ -44,8 +43,7 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
             [Inject(Id = "_fusesInstalledQuest")] ObjectiveTrigger fusesInstalledQuest,
             [Inject(Id = "_electricalPanelFoundTrigger")] GameObject electricalPanelFoundTrigger,
             [Inject(Id = "_fuses")] GameObject[] fuses,
-            [Inject(Id = "_cartTrigger")] GameObject cartTrigger,
-            [Inject(Id = "_cartScreamer")] GameObject cartScreamer
+            [Inject(Id = "_cartTrigger")] GameObject cartTrigger
         )
         {
             _timeline = timeline;
@@ -62,7 +60,6 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
             
             // jumpScares
             _cartTrigger = cartTrigger;
-            _cartScreamer = cartScreamer;
         }
 
         public void Initialize()
@@ -88,7 +85,6 @@ namespace GameTimeline.Quests.FirstChapter.LightsFix
             }
             
             ObjectsToggler.EnableObject(_cartTrigger);
-            // ObjectsToggler.EnableObject(_cartScreamer);
         }
 
         private void OnFusesFound()

@@ -67,6 +67,8 @@ namespace GameTimeline
 
         public void CompleteTutorial()
         {
+            
+            
             // TODO: баг с корутинами
             _lightsFixTimeline.TriggerFindElectricalPanel();
             DialogBrain.Instance.PlayNext();
