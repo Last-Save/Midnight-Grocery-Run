@@ -2,6 +2,7 @@
 using GameTimeline.JumpScares;
 using GameTimeline.Quests;
 using GameTimeline.TImeLines;
+using ThunderWire.Attributes;
 using UHFPS.Runtime;
 using UnityEngine;
 using Utils;
@@ -53,25 +54,26 @@ namespace GameTimeline
             _onFinishFirstChapter.OnPlayerEnter += FinishFirstChapter;
         }
 
-        // public void Initialize()
-        // {
-        //     //Начинать сначала
-        //     _tutorialTimeline.TriggerNewGameStarted();
-        // }
-
         public void Initialize()
         {
-            FinishFirstChapter();
+            //Начинать сначала
+            _tutorialTimeline.TriggerNewGameStarted();
         }
+
+        // public void Initialize()
+        // {
+        //     FinishFirstChapter();
+        // }
 
         public void CompleteTutorial()
         {
-            
             // TODO: баг с корутинами
             _lightsFixTimeline.TriggerFindElectricalPanel();
+            DialogBrain.Instance.PlayNext();
             
             // TODO: Переместить в GameTimeline.Quests.FirstChapter.Tutorial
             MyСoroutine.Instance.ScheduleMethodCall(5f, _jumpScaresFirstChapterJumpscare.StartBabyCrying);
+            MyСoroutine.Instance.ScheduleMethodCall(7f, DialogBrain.Instance.PlayNext);
         }
 
         private void CompleteSearchOfElectricalPanel()
@@ -82,6 +84,7 @@ namespace GameTimeline
         public void CompleteLightsFix()
         {
             StartRegisterQuest();
+            DialogBrain.Instance.PlayNext();
         }
         
         public void Dispose()

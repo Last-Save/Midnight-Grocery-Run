@@ -63,6 +63,7 @@ namespace GameTimeline.Quests.FirstChapter.Tutorial
         public void Initialize()
         {
             _tutorialTimeline.SubscribeOnNewGameStarted(AssignBasicTutorialQuests);
+            _tutorialTimeline.SubscribeOnNewGameStarted(PlayFirstVoiceLine);
             _tutorialTimeline.SubscribeOnWasdCompleted(CompleteWasd);
             _tutorialTimeline.SubscribeOnShiftCompleted(CompleteShift);
             _tutorialTimeline.SubscribeOnWasdAndShiftControlsCompleted(AssignFindingFlashlightQuest);
@@ -77,6 +78,11 @@ namespace GameTimeline.Quests.FirstChapter.Tutorial
             _notificationExplainerOpener.DrawUi(NotificationPresenter.INVENTORY_OPEN_EXPLANATION);
 
             _inputController.enabled = true;
+        }
+
+        private void PlayFirstVoiceLine()
+        {
+            MyСoroutine.Instance.ScheduleMethodCall(0.3f, DialogBrain.Instance.PlayNext);
         }
 
         private void CompleteWasd()

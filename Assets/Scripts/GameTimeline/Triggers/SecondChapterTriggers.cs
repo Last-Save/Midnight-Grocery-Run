@@ -18,6 +18,7 @@ namespace GameTimeline
         
         public void StartSecondChapterFirstQuest()
         {
+            DialogBrain.Instance.PlayNext();
             _shopSwitcher.SwitchGameToHorrorShop();
             _storeInspection.StartQuest(StartSecondChapterSecondQuest);
         }

@@ -175,9 +175,11 @@ namespace GameTimeline.Quests.SecondChapter
 
         private void OnMainDoorOpened()
         {
+            //9 + 10
+            DialogBrain.Instance.PlayNext();
+            
             _openFirstDoorComplete.TriggerObjective();
             ObjectsToggler.EnableObject(_newWayOutTrigger.gameObject);
-                
             
             _numpadQuest.Start();
             _numpadQuest.OnQuestCompleted += OnNumpadLocksOpened;

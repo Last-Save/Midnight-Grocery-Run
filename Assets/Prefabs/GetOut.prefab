@@ -482,7 +482,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6594729103689503015}
   - component: {fileID: 1566351346521010278}
+  - component: {fileID: 8418857755642256645}
   - component: {fileID: 4636540848439784083}
+  - component: {fileID: 7279569836171457043}
   m_Layer: 0
   m_Name: 1_door_is_found_newAndComplete_TRIGGER
   m_TagString: Untagged
@@ -527,6 +529,27 @@ MonoBehaviour:
     ObjectiveKey: "2 \u043F\u043E\u0438\u0441\u043A \u0432\u044B\u0445\u043E\u0434\u0430"
     SubObjectives:
     - "\u041D\u0410\u0439\u0442\u0438 \u0434\u0432\u0435\u0440\u044C"
+--- !u!114 &8418857755642256645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537983347690468210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463818b2825d6b0439a2f9ff3b9ab45f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TriggerType: 0
+  DialogueType: 0
+  DialogueContinue: 0
+  Dialogue: {fileID: 11400000, guid: 20a69b97e5d7ffe40a8312ec44bb0051, type: 2}
+  DialogueAudio: {fileID: 7279569836171457043}
+  BinderName: 
+  RangedDialogue: 0
+  ResetDialogueWhenOut: 0
+  LocalDialogueRange: 0
 --- !u!65 &4636540848439784083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -548,6 +571,103 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.5550537, y: 2.7656298, z: 2.8276567}
   m_Center: {x: -0.60164833, y: 0.8828149, z: 0.9138284}
+--- !u!82 &7279569836171457043
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3537983347690468210}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &3720692003582980994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2434,6 +2554,54 @@ PrefabInstance:
     - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
       propertyPath: 'LeversState.LeverStates.Array.data[3]'
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeverChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeverChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeversCorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeversCorrect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeverChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeverChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerJumpscare
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeversCorrect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TriggerObjective
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeversCorrect.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: TriggerJumpscare
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeverChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UHFPS.Runtime.JumpscareTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeversCorrect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UHFPS.Runtime.ObjectiveTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeversCorrect.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UHFPS.Runtime.JumpscareTrigger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3100799036163131778, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
+      propertyPath: OnLeverChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8375257412099098923, guid: 20ebc93f25da40648a12a36b1563ffaa, type: 3}
       propertyPath: m_Name

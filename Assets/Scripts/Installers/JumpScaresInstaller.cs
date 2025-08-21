@@ -15,6 +15,7 @@ namespace Installers
         
         [Title("First chapter GameObjects")]
         [SerializeField] private GameObject _cartTrigger;
+        [SerializeField] private GameObject _cartScreamer;
 
 
         [Title("Second chapter facial")]
@@ -37,11 +38,9 @@ namespace Installers
         {
             Container.Bind<JumpscareTrigger>().WithId("_babyCrying").FromInstance(_babyCrying);
             
-            
             //Install GameObjects
             Container.Bind<GameObject>().WithId("_cartTrigger").FromInstance(_cartTrigger);
-
-            
+            Container.Bind<GameObject>().WithId("_cartScreamer").FromInstance(_cartScreamer);
         }
 
         private void InstallSecondChapter()

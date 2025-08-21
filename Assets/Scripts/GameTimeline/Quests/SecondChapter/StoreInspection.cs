@@ -32,21 +32,23 @@ namespace GameTimeline.Quests.SecondChapter
             
             _playerHealth.OnApplyDamage(85);
             // MyСoroutine.Instance.ScheduleMethodCall(8f, AssignInspectionQuest);
-            MyСoroutine.Instance.ScheduleMethodCall(1f, AssignInspectionQuest);
+            MyСoroutine.Instance.ScheduleMethodCall(5f, AssignInspectionQuest);
         }
 
         private void AssignInspectionQuest()
         {
+            DialogBrain.Instance.PlayNext();
+            
             _playerHealth.OnApplyHeal(85);
             _give.TriggerObjective();
-            // MyСoroutine.Instance.ScheduleMethodCall(60f, CompleteInspectionQuest);
-            MyСoroutine.Instance.ScheduleMethodCall(1f, CompleteInspectionQuest);
+            MyСoroutine.Instance.ScheduleMethodCall(60f, CompleteInspectionQuest);
         }
 
         private void CompleteInspectionQuest()
         {
-            _complete.TriggerObjective();
+            DialogBrain.Instance.PlayNext();
             
+            _complete.TriggerObjective();
             _onQuestCompleted?.Invoke();
         }
     }
